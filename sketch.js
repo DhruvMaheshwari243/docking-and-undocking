@@ -27,12 +27,24 @@ function draw() {
    // spacecraft.x = Math.round(random(200,400));
    if(keyDown(37)){
     spacecraft.addImage(spacecraft3Img);
-    spacecraft.velocityX(5)
+    spacecraft.x = spacecraft.x-5;
    }
 
    if(keyDown(39)){
     spacecraft.addImage(spacecraft4Img);
+    spacecraft.x = spacecraft.x+5;
    }
+
+   if(keyDown(38)){
+    spacecraft.y = spacecraft.y-5;
+   }
+
+   if(keyDown(40)){
+    spacecraft.addImage(spacecraft2Img);
+    spacecraft.y = spacecraft.y+5;
+   }
+
+  
   }
 
   drawSprites();
